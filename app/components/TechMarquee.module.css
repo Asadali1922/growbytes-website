@@ -1,0 +1,29 @@
+.marqueeContainer {
+  background: var(--color-section);
+  padding: 60px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 40px;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgba(255,255,255,0.2);
+  transition: color 0.3s;
+}
+
+.marqueeItem:hover {
+  color: var(--color-primary);
+}
+
+.marqueeDot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}

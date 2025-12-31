@@ -1,0 +1,193 @@
+.headerGlass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navLinkBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.navLinkBtn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sepVertical {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0f1012;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.megaCatTitle {
+  color: var(--text-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.megaLinkItem {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background 0.2s;
+}
+
+.megaLinkItem:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: rgba(178, 255, 117, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBox svg {
+  width: 18px;
+  height: 18px;
+}
+
+.linkTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.linkDesc {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.megaFeatureCard {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.featureBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--color-primary);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.megaFeatureCard h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.megaFeatureCard p {
+  font-size: 13px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.featureLink {
+  font-size: 13px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  
+  .megaGrid {
+    grid-template-columns: 1fr;
+  }
+}

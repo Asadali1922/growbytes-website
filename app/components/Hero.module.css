@@ -1,0 +1,179 @@
+.heroSection {
+  position: relative;
+  padding: 120px 0 100px;
+  margin-top: 70px;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.heroBgGrid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGlow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: var(--color-primary);
+  opacity: 0.15;
+  filter: blur(120px);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.02em;
+}
+
+.heroDesc {
+  font-size: 20px;
+  max-width: 540px;
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(178, 255, 117, 0.1);
+  border: 1px solid rgba(178, 255, 117, 0.2);
+  border-radius: 20px;
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.heroBtns {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.visualContainer {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-radius: var(--radius-lg);
+  position: absolute;
+}
+
+.mainCard {
+  width: 380px;
+  height: 260px;
+  z-index: 2;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+}
+
+.cardHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.dot { 
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+}
+
+.red { background: #FF5F56; }
+.yellow { background: #FFBD2E; }
+.green { background: #27C93F; }
+
+.skeletonLine { 
+  height: 8px; 
+  background: rgba(255,255,255,0.1); 
+  border-radius: 4px; 
+  margin-bottom: 12px; 
+}
+
+.skeletonBox { 
+  height: 80px; 
+  background: rgba(255,255,255,0.05); 
+  border-radius: 8px; 
+  margin-top: 20px; 
+  border: 1px dashed rgba(255,255,255,0.1); 
+}
+
+.w75 { width: 75%; }
+.w50 { width: 50%; }
+
+.smallCard {
+  width: 100px;
+  padding: 15px;
+  text-align: center;
+  top: 15%;
+  right: 0;
+  z-index: 3;
+}
+
+.float1 { }
+
+@media (max-width: 968px) {
+  .heroWrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-6);
+  }
+  
+  .heroTitle { font-size: 42px; }
+  .heroDesc { margin-inline: auto; }
+  .heroBtns { justify-content: center; }
+  
+  .visualContainer { 
+    height: 350px; 
+    margin-top: 20px; 
+  }
+  
+  .mainCard { 
+    width: 300px; 
+    height: 220px; 
+  }
+  
+  .smallCard { right: 10%; }
+}
