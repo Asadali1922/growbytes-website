@@ -65,6 +65,20 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+
+       <div className={`${styles.workItem} reveal`}>
+          <div className={styles.workImgWrapper}>
+            <div className={styles.workImgPlaceholder}>FINTECH DASHBOARD</div>
+          </div>
+          <div className={styles.workInfo}>
+            <span className={styles.workTag}>FINANCE / WEB APP</span>
+            <h3 className="mt-sm">Modernizing Banking for the 21st Century</h3>
+            <p className="text-muted mt-md mb-lg">
+              A complete overhaul of a legacy banking system into a high-speed cloud platform.
+            </p>
+            <button className="btn btn-secondary btn-sm">View Case Study</button>
+          </div>
+        </div>
     </section>
   );
 }
