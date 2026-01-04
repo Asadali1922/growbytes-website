@@ -5,7 +5,7 @@ import './Header.css';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState(null);
+ const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -55,9 +55,9 @@ export default function Header() {
     setActiveMobileSubmenu(null);
   };
 
-  const toggleMobileSubmenu = (menu) => {
-    setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu);
-  };
+  const toggleMobileSubmenu = (menu: string) => {
+  setActiveMobileSubmenu(activeMobileSubmenu === menu ? null : menu);
+};
 
   return (
     <header className="header-glass">
