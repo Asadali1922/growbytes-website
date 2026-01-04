@@ -42,3 +42,11 @@ git add .
 git commit -m "Update Changes"
 git push
 vercel --prod
+
+
+git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/Asadali1922/growbytes-website.git
+   git push -u origin main
