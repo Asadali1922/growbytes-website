@@ -1,6 +1,6 @@
 .heroSection {
   position: relative;
-  padding: 120px 0 100px;
+  padding: 50px 0 50px;
   margin-top: 70px;
   overflow: hidden;
   background-color: var(--color-bg);
@@ -10,8 +10,8 @@
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
   pointer-events: none;
@@ -25,7 +25,7 @@
   width: 600px;
   height: 600px;
   background: var(--color-primary);
-  opacity: 0.15;
+  opacity: 0.08;
   filter: blur(120px);
   border-radius: 50%;
   z-index: 0;
@@ -92,11 +92,11 @@
 }
 
 .glassCard {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
   border-radius: var(--radius-lg);
   position: absolute;
 }
@@ -106,7 +106,9 @@
   height: 260px;
   z-index: 2;
   padding: 20px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(249,250,251,1) 100%);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
 }
 
 .cardHeader {
@@ -127,17 +129,17 @@
 
 .skeletonLine { 
   height: 8px; 
-  background: rgba(255,255,255,0.1); 
+  background: rgba(0,0,0,0.06); 
   border-radius: 4px; 
   margin-bottom: 12px; 
 }
 
 .skeletonBox { 
   height: 80px; 
-  background: rgba(255,255,255,0.05); 
+  background: rgba(247,248,250,1); 
   border-radius: 8px; 
   margin-top: 20px; 
-  border: 1px dashed rgba(255,255,255,0.1); 
+  border: 1px dashed rgba(0,0,0,0.04); 
 }
 
 .w75 { width: 75%; }

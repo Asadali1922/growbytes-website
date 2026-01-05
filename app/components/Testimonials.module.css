@@ -10,10 +10,10 @@
 }
 
 .testiCard {
-  background: rgba(255,255,255,0.02);
+  background: var(--color-card);
   border-radius: 24px;
   padding: 40px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid var(--color-border);
   position: relative;
 }
 
