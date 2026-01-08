@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 import './Header.css';
 
 export default function Header() {
@@ -36,14 +37,28 @@ export default function Header() {
         if (!header) return;
 
         const currentScroll = window.pageYOffset;
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
         if (currentScroll > 50) {
-          header.style.background = 'rgba(255, 255, 255, 0.95)';
-          header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.15)';
-          header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+          if (isDark) {
+            header.style.background = 'rgba(10, 10, 10, 0.95)';
+            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
+            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.5)';
+          } else {
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.15)';
+            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
+          }
         } else {
-          header.style.background = 'rgba(255, 255, 255, 0.8)';
-          header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
-          header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
+          if (isDark) {
+            header.style.background = 'rgba(10, 10, 10, 0.8)';
+            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.3)';
+          } else {
+            header.style.background = 'rgba(255, 255, 255, 0.8)';
+            header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
+          }
         }
         lastScroll = currentScroll;
       });
@@ -814,6 +829,7 @@ export default function Header() {
           <a href="#" className="nav-link-btn">Case Studies</a>
           {/* <a href="#" className="nav-link-btn">About</a> */}
 
+          <ThemeToggle />
           <div className="sep-vertical"></div>
           <button className="btn btn-primary">Let's Talk</button>
         </div>
@@ -953,6 +969,10 @@ export default function Header() {
           <a href="#" className="mobile-link">About</a>
 
           <div className="mobile-cta">
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+              <span style={{ fontSize: '15px', fontWeight: '500', color: 'var(--text-primary)' }}>Theme</span>
+              <ThemeToggle />
+            </div>
             <button className="btn btn-primary btn-block">Let's Talk</button>
           </div>
         </div>
