@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { ThemeProvider } from "./ThemeProvider";
 import "./globals.css";
 
 const inter = Inter({ 
@@ -38,7 +39,11 @@ export default function RootLayout({
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

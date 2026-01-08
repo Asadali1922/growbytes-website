@@ -24,6 +24,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+[data-theme="dark"] .header-glass {
+  background: rgba(10, 10, 10, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 /* Container */
 .container {
   max-width: var(--container-width);
@@ -158,10 +164,16 @@
   padding: 40px 0px 25px 0px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);  
+  transform: translateY(10px);
   transition: all 0.3s ease;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   z-index: 999;
+}
+
+[data-theme="dark"] .mega-menu {
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .mega-menu-centered {
@@ -204,6 +216,10 @@
 .mega-link-item:hover {
   background: #f9f9f9;
   transform: translateX(0);
+}
+
+[data-theme="dark"] .mega-link-item:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .mega-link-item:hover .icon-box {
@@ -278,6 +294,10 @@
   color: var(--text-primary);
   background: rgba(0, 0, 0, 0.03);
   padding-left: 12px;
+}
+
+[data-theme="dark"] .sub-service-link:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .sub-service-link .arrow-icon {
@@ -473,6 +493,11 @@
     max-height: calc(100vh - 70px);
     overflow-y: auto;
     padding: 0;
+  }
+
+  [data-theme="dark"] .mobile-menu {
+    background: rgba(10, 10, 10, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .mobile-menu-item {
