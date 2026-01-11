@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 import './Header.css';
 
 export default function Header() {
@@ -37,28 +36,15 @@ export default function Header() {
         if (!header) return;
 
         const currentScroll = window.pageYOffset;
-        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 
         if (currentScroll > 50) {
-          if (isDark) {
-            header.style.background = 'rgba(10, 10, 10, 0.95)';
-            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
-            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.5)';
-          } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.15)';
-            header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
-          }
+          header.style.background = 'rgba(255, 255, 255, 0.95)';
+          header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.15)';
+          header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
         } else {
-          if (isDark) {
-            header.style.background = 'rgba(10, 10, 10, 0.8)';
-            header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.3)';
-          } else {
-            header.style.background = 'rgba(255, 255, 255, 0.8)';
-            header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
-            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
-          }
+          header.style.background = 'rgba(255, 255, 255, 0.8)';
+          header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
+          header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.05)';
         }
         lastScroll = currentScroll;
       });
@@ -102,7 +88,72 @@ export default function Header() {
               <div className="mega-menu-centered">
                 <div className="mega-grid">
                   <div className="mega-col">
-                    {/* <h4>Growth Services</h4> */}
+                    <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <path d="M3 9h18M9 21V9" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">Web & Mobile App</span>
+                        <span className="link-desc">Custom web and mobile applications</span>
+                      </div>
+                    </a>
+                      <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <circle cx="9" cy="21" r="1" />
+                          <circle cx="20" cy="21" r="1" />
+                          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">E-commerce Solutions</span>
+                        <span className="link-desc">Build and grow online stores</span>
+                      </div>
+                    </a>
+                    <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                          <polyline points="14 2 14 8 20 8" />
+                          <line x1="12" y1="11" x2="12" y2="17" />
+                          <line x1="9" y1="14" x2="15" y2="14" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">Web Design & Development</span>
+                        <span className="link-desc">High-converting business websites</span>
+                      </div>
+                    </a>
+                  
+                    <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">CRM & ERP Solutions</span>
+                        <span className="link-desc">Streamline business operations</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div className="mega-col">
+                                        <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">Social Media Marketing</span>
+                        <span className="link-desc">Grow your audience and engagement</span>
+                      </div>
+                    </a>
                     <a href="#" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -110,205 +161,11 @@ export default function Header() {
                         </svg>
                       </div>
                       <div className="link-content">
-                        <span className="link-title">Performance Marketing</span>
-                        {/* <span className="link-desc">Turn clicks into paying customers</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Meta Ads
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Google PPC
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            TikTok & UGC Ads
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Retargeting Campaigns
-                          </span>
-                        </div>
-                      </div>
-
-                    </a>
-                    <a href="#" className="mega-link-item">
-                      <div className="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <path d="M3 9h18M9 21V9" />
-                        </svg>
-                      </div>
-                      <div className="link-content">
-                        <span className="link-title">Business Websites</span>
-                        {/* <span className="link-desc">Conversion-focused websites</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            E-commerce Development
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Landing Pages
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Corporate Website Design
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            UI/UX Design
-                          </span>
-                        </div>
-                      </div>
-
-                    </a>
-                    <a href="#" className="mega-link-item">
-                      <div className="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <path d="M3 9h18M9 21V9" />
-                        </svg>
-                      </div>
-                      <div className="link-content">
-                        <span className="link-title">CRM / ERP Systems</span>
-                        {/* <span className="link-desc">Manage leads & operations</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            CRM Setup 
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Sales Pipelines
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            ERP Modules
-                          </span>
-
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Custom Workflows 
-                          </span>
-                        </div>
-                      </div>
-
-
-                    </a>
-                  </div>
-
-                  <div className="mega-col">
-                    {/* <h4>Conversion</h4> */}
-                    <a href="#" className="mega-link-item">
-                      <div className="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                          <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                      </div>
-                      <div className="link-content">
-                        <span className="link-title">Sales Funnels</span>
-                         {/* <span className="link-desc">Turn clicks into paying customers</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Lead Magnet Funnels
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Webinar Funnels
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Product Launch Funnels
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Email Marketing Sequences
-                          </span>
-                        </div>
+                        <span className="link-title">Google Ads & PPC</span>
+                        <span className="link-desc">Instant visibility & conversions</span>
                       </div>
                     </a>
-                    <a href="#" className="mega-link-item">
-                      <div className="icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <circle cx="11" cy="11" r="8" />
-                          <path d="m21 21-4.35-4.35" />
-                        </svg>
-                      </div>
-                      <div className="link-content">
-                        <span className="link-title">CRO</span>
-                         {/* <span className="link-desc">Maximize revenue from traffic</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Conversion audits
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            A/B testing
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Heatmap Analysis
-                          </span>
-                           <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Checkout Optimizations
-                          </span>
-                        </div>
-                      </div>
-                    </a>
+
                     <a href="#" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -318,175 +175,75 @@ export default function Header() {
                       </div>
                       <div className="link-content">
                         <span className="link-title">SEO & Organic Growth</span>
-                          {/* <span className="link-desc">Boost organic visibility</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Technical SEO 
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            On-Page & Content Strategy
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Link Building (Off-Page SEO)
-                          </span>
-                           <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                           Local SEO
-                          </span>
-                        </div>
+                        <span className="link-desc">Long-term sustainable traffic</span>
+                      </div>
+                    </a>
+                    <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">Email Marketing</span>
+                        <span className="link-desc">Convert leads into customers</span>
                       </div>
                     </a>
                   </div>
 
                   <div className="mega-col">
-                    {/* <h4>Technology</h4> */}
                     <a href="#" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                          <circle cx="12" cy="12" r="4" />
+                          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
                       </div>
                       <div className="link-content">
-                        <span className="link-title">AI & Business Automation</span>
-                        {/* <span className="link-desc">Streamline operations with AI</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            AI Chatbots & Support Agents
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Email Marketing Automation
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Workflow Optimization
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Lead Generation Automation
-                          </span>
-                        </div>
+                        <span className="link-title">Workflow Automation</span>
+                        <span className="link-desc">AI-powered process automation</span>
                       </div>
                     </a>
                     <a href="#" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M3 3v18h18" />
-                          <path d="m19 9-5 5-4-4-3 3" />
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                         </svg>
                       </div>
                       <div className="link-content">
-                        <span className="link-title">Analytics & Growth Insights</span>
-                        {/* <span className="link-desc">Real-time dashboards</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Custom Dashboard Setup
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            GA4 & Conversion Tracking
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Performance Reporting
-                          </span>
-                           <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Competitor Analysis
-                          </span>
-                        </div>
+                        <span className="link-title">AI Support Chatbots</span>
+                        <span className="link-desc">24/7 customer support automation</span>
                       </div>
                     </a>
-                      <a href="#" className="mega-link-item">
+                    <a href="#" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M3 3v18h18" />
-                          <path d="m19 9-5 5-4-4-3 3" />
+                          <circle cx="12" cy="12" r="1" />
+                          <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24" />
                         </svg>
                       </div>
                       <div className="link-content">
-                        <span className="link-title">Brand Systems & Positioning</span>
-                        {/* <span className="link-desc">Build a memorable brand</span> */}
-                        <div className="sub-services">
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Brand Identity Design
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Brand Guidelines
-                          </span>
-                          <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Brand Strategy
-                          </span>
-                           <span className="sub-service-link">
-                            <svg className="arrow-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor">
-                              <path d="M6 4l4 4-4 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                            Rebranding Services
-                          </span>
-                        </div>
+                        <span className="link-title">AI Sales Automation</span>
+                        <span className="link-desc">Lead generation & sales acceleration</span>
+                      </div>
+                    </a>
+                    <a href="#" className="mega-link-item">
+                      <div className="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <div className="link-content">
+                        <span className="link-title">AI Marketing Automation</span>
+                        <span className="link-desc">Content & campaign automation</span>
                       </div>
                     </a>
                   </div>
 
                   <div className="mega-col">
                     <div className="mega-feature-card">
-                      {/* <div className="feature-icon-wrapper">
-                        <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                        </svg>
-                      </div> */}
-                      <div className="feature-badge">Most Popular</div>
-                      <h4>Performance Marketing</h4>
-                      <p>Scale your business with data-driven paid advertising campaigns that deliver measurable ROI.</p>
-                      <div className="feature-stats">
-                        <div className="stat-item">
-                          <span className="stat-value">3x</span>
-                          <span className="stat-label">Avg ROAS</span>
-                        </div>
-                        <div className="stat-item">
-                          <span className="stat-value">150+</span>
-                          <span className="stat-label">Campaigns</span>
-                        </div>
-                      </div>
+                      <div className="feature-badge">Complete Solution</div>
+                      <h4>Growth Command Center</h4>
+                      <p>One unified platform combining development, marketing, and automation. Everything you need to scale.</p>
                       <a href="#" className="feature-link">Get Started →</a>
                     </div>
                   </div>
@@ -829,7 +586,6 @@ export default function Header() {
           <a href="#" className="nav-link-btn">Case Studies</a>
           {/* <a href="#" className="nav-link-btn">About</a> */}
 
-          <ThemeToggle />
           <div className="sep-vertical"></div>
           <button className="btn btn-primary">Let's Talk</button>
         </div>
@@ -869,22 +625,25 @@ export default function Header() {
             {activeMobileSubmenu === 'services' && (
               <div className="mobile-submenu">
                 <div className="mobile-submenu-section">
-                  <h5>Growth Services</h5>
-                  <a href="#" className="mobile-submenu-item">Performance Marketing</a>
-                  <a href="#" className="mobile-submenu-item">Business Websites</a>
-                  <a href="#" className="mobile-submenu-item">CRM / ERP Systems</a>
+                  <h5>Development</h5>
+                  <a href="#" className="mobile-submenu-item">Web & Mobile App</a>
+                  <a href="#" className="mobile-submenu-item">Web Design & Development</a>
+                  <a href="#" className="mobile-submenu-item">E-commerce Solutions</a>
+                  <a href="#" className="mobile-submenu-item">CRM & ERP Solutions</a>
                 </div>
                 <div className="mobile-submenu-section">
-                  <h5>Conversion</h5>
-                  <a href="#" className="mobile-submenu-item">Sales Funnels</a>
-                  <a href="#" className="mobile-submenu-item">CRO</a>
+                  <h5>Growth Marketing</h5>
+                  <a href="#" className="mobile-submenu-item">Google Ads & PPC</a>
+                  <a href="#" className="mobile-submenu-item">Social Media Marketing</a>
                   <a href="#" className="mobile-submenu-item">SEO & Organic Growth</a>
+                  <a href="#" className="mobile-submenu-item">Email Marketing</a>
                 </div>
                 <div className="mobile-submenu-section">
-                  <h5>Technology</h5>
-                  <a href="#" className="mobile-submenu-item">AI Automation</a>
-                  <a href="#" className="mobile-submenu-item">Analytics & Insights</a>
-                  <a href="#" className="mobile-submenu-item">Brand Systems</a>
+                  <h5>AI Automation</h5>
+                  <a href="#" className="mobile-submenu-item">Workflow Automation</a>
+                  <a href="#" className="mobile-submenu-item">AI Support Chatbots</a>
+                  <a href="#" className="mobile-submenu-item">AI Sales Automation</a>
+                  <a href="#" className="mobile-submenu-item">AI Marketing Automation</a>
                 </div>
               </div>
             )}
@@ -969,10 +728,6 @@ export default function Header() {
           <a href="#" className="mobile-link">About</a>
 
           <div className="mobile-cta">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-              <span style={{ fontSize: '15px', fontWeight: '500', color: 'var(--text-primary)' }}>Theme</span>
-              <ThemeToggle />
-            </div>
             <button className="btn btn-primary btn-block">Let's Talk</button>
           </div>
         </div>

@@ -112,7 +112,7 @@ cursor: pointer;
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.8fr repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 50px;
   margin-bottom: 60px;
 }
@@ -317,6 +317,36 @@ cursor: pointer;
   font-size: 14px;
   color: var(--footer-muted);
   margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-link {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-muted);
+  transition: all 0.2s;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.social-link:hover {
+  color: var(--footer-primary);
+  background: rgba(22, 163, 74, 0.1);
+}
+
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .footer-legal {
