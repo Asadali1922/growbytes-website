@@ -41,6 +41,7 @@
 .nav {
   height: 70px;
   display: flex;
+      background: white !important;
   align-items: center;
   justify-content: space-between;
 }

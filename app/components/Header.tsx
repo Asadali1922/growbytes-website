@@ -88,7 +88,7 @@ export default function Header() {
               <div className="mega-menu-centered">
                 <div className="mega-grid">
                   <div className="mega-col">
-                    <a href="#" className="mega-link-item">
+                    <a href="/services/web-mobile-app-development" className="mega-link-item">
                       <div className="icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -626,7 +626,7 @@ export default function Header() {
               <div className="mobile-submenu">
                 <div className="mobile-submenu-section">
                   <h5>Development</h5>
-                  <a href="#" className="mobile-submenu-item">Web & Mobile App</a>
+                  <a href="/services/web-mobile-app-development" className="mobile-submenu-item">Web & Mobile App</a>
                   <a href="#" className="mobile-submenu-item">Web Design & Development</a>
                   <a href="#" className="mobile-submenu-item">E-commerce Solutions</a>
                   <a href="#" className="mobile-submenu-item">CRM & ERP Solutions</a>

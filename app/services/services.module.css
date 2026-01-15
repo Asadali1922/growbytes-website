@@ -1,0 +1,386 @@
+/* app/services/services.module.css */
+
+.main {
+  background-color: var(--color-bg); /* Ensure this matches your globals */
+  overflow-x: hidden;
+}
+
+/* --- Placeholders --- */
+.imagePlaceholder {
+  width: 100%;
+  background: #111;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.imagePlaceholder:hover {
+  border-color: var(--color-primary);
+  background: rgba(22, 163, 74, 0.05);
+}
+
+.placeholderContent {
+  text-align: center;
+  max-width: 80%;
+}
+
+.placeholderIcon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.designGuide {
+  font-size: 12px;
+  color: #fbbf24; /* Amber color for "Warning/Attention" feel */
+  background: rgba(251, 191, 36, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  line-height: 1.4;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+/* --- Hero Section --- */
+.heroSection {
+  padding: 140px 0 100px;
+  position: relative;
+  background: #050505; /* Dark premium background */
+  color: #fff;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(22, 163, 74, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 163, 74, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.heroTitle {
+  font-size: 72px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  letter-spacing: -0.03em;
+}
+
+.heroTitle .block {
+  display: block;
+}
+
+.heroDesc {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #9ca3af;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.heroDesc strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.heroStats {
+  display: flex;
+  gap: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 40px;
+}
+
+.statVal {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- Intro Section --- */
+.introSection {
+  padding: 100px 0;
+  background: var(--color-bg);
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.introHeading h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  position: sticky;
+  top: 100px;
+}
+
+.introText p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.introText strong {
+  color: var(--color-primary);
+}
+
+/* --- Service Sections (Alternating) --- */
+.serviceSection {
+  padding: 100px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.serviceLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Reversed layout for the middle section */
+.reversed .serviceLayout {
+  direction: rtl; /* Quick hack for swapping columns visually */
+}
+.reversed .serviceLayout > * {
+  direction: ltr; /* Reset text direction inside */
+}
+
+.sectionNumber {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  display: block;
+  font-family: monospace;
+}
+
+.textContent h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.serviceLead {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.richContent p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.featureList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.featureList strong {
+  color: var(--text-primary);
+}
+
+.textLink {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 16px;
+  transition: gap 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.textLink:hover {
+  text-decoration: underline;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+/* --- Process Section --- */
+.processSection {
+  padding: 100px 0;
+  background: var(--color-section);
+}
+
+.processHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.processHeader h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.timelineContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+.timelineContainer::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.timelineItem {
+  position: relative;
+  z-index: 1;
+}
+
+.timelineIcon {
+  width: 50px;
+  height: 50px;
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  font-family: monospace;
+}
+
+.timelineContent h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.timelineContent p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --- CTA Section --- */
+.ctaSection {
+  padding: 100px 0;
+}
+
+.ctaWrapper {
+  background: linear-gradient(135deg, #111 0%, #000 100%);
+  border-radius: 30px;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ctaContent h2 {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.ctaContent p {
+  color: #9ca3af;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 16px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .heroTitle { font-size: 52px; }
+  .introGrid { grid-template-columns: 1fr; gap: 30px; }
+  .introHeading h2 { position: static; margin-bottom: 20px; }
+  .serviceLayout { grid-template-columns: 1fr; gap: 50px; }
+  .reversed .serviceLayout { direction: ltr; }
+  .timelineContainer { grid-template-columns: 1fr; padding-left: 30px; }
+  .timelineContainer::before { 
+    width: 2px; height: 100%; left: 0; top: 0; 
+  }
+  .timelineItem { display: flex; gap: 20px; align-items: flex-start; }
+  .timelineIcon { margin-bottom: 0; flex-shrink: 0; }
+  .ctaWrapper { grid-template-columns: 1fr; padding: 40px; text-align: center; }
+  .ctaBtns { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .heroStats { flex-direction: column; gap: 20px; }
+  .heroTitle { font-size: 42px; }
+  .ctaBtns { flex-direction: column; width: 100%; }
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

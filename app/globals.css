@@ -176,12 +176,12 @@ section {
 }
 
 .btn-secondary {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgb(255, 255, 255);
   color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(0,0,0,0.08);
+  background-color: rgb(255, 255, 255);
 }
 
 [data-theme="dark"] .btn-secondary {
